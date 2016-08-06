@@ -1,8 +1,14 @@
 {
+  "presets": [ "react-native" ],
   "env": {
     "development": {
-      "presets": ["es2015", "react-native"],
-      "compact" : true
+      "sourceMaps": "inline"
     }
-  }
+  },
+  "plugins": [
+    ["module-alias", [
+      { "src": "./src/components", "expose": "components" },
+      { "src": "./src/styles", "expose": "styles" }
+    ]]
+  ]
 }
