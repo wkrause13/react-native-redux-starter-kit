@@ -1,7 +1,7 @@
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const DEFAULT_ACTION = '<%= pascalEntityName %>.DEFAULT_ACTION'
+export const DEFAULT_ACTION = 'DEFAULT_ACTION'
 
 // ------------------------------------
 // Actions

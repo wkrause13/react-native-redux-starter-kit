@@ -8,7 +8,8 @@
   "plugins": [
     ["module-alias", [
       { "src": "./src/components", "expose": "components" },
-      { "src": "./src/styles", "expose": "styles" }
+      { "src": "./src/styles", "expose": "styles" },
+      { "src": "./src/routes", "expose": "routes" }
     ]]
   ]
 }

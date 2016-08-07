@@ -9,6 +9,8 @@
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
     "tron": "node_modules/.bin/reactotron",
+    "test": "mocha --require tests/setup.js tests/**/*.spec.js",
+    "watch:test": "mocha --require tests/setup.js tests/**/*.spec.js --watch",
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
     "android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
@@ -21,12 +23,79 @@
     "react-native": "0.31.0",
     "react-native-router-flux": "^3.33.2",
     "react-redux": "^4.4.5",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "babel": "^6.5.2",
+    "babel-core": "^6.13.2",
     "babel-plugin-module-alias": "^1.6.0",
     "babel-preset-react-native": "^1.9.0",
-    "reactotron": "^0.8.0"
+    "chai": "^3.5.0",
+    "chai-as-promised": "^5.3.0",
+    "chai-immutable": "^1.6.0",
+    "enzyme": "^2.4.1",
+    "mocha": "^3.0.1",
+    "mockery": "^1.7.0",
+    "react-addons-test-utils": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-native-mock": "^0.2.5",
+    "reactotron": "^0.8.0",
+    "sinon": "^1.17.5",
+    "standard": "^7.1.2"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.js",
+      "!tests/setup.js"
+    ],
+    "require": [
+      "babel-register",
+      "babel-polyfill",
+      "react-native-mock/mock",
+      "./tests/Setup"
+    ],
+    "babel": {
+      "presets": [
+        "react-native"
+      ],
+      "env": {
+        "development": {
+          "sourceMaps": "inline"
+        }
+      },
+      "plugins": [
+        [
+          "module-alias",
+          [
+            {
+              "src": "../src/styles",
+              "expose": "components"
+            },
+            {
+              "src": "./src/styles",
+              "expose": "styles"
+            },
+            {
+              "src": "./src/routes",
+              "expose": "routes"
+            }
+          ]
+        ]
+      ]
+    }
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe",
+      "it",
+      "fetch",
+      "navigator",
+      "__DEV__",
+      "XMLHttpRequest",
+      "FormData"
+    ]
   }
 }
