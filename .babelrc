@@ -9,7 +9,8 @@
     ["module-alias", [
       { "src": "./src/components", "expose": "components" },
       { "src": "./src/styles", "expose": "styles" },
-      { "src": "./src/routes", "expose": "routes" }
+      { "src": "./src/routes", "expose": "routes" },
+      { "src": "./src/static", "expose": "static" }
     ]]
   ]
 }

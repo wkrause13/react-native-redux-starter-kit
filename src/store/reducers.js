@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import {HomeReducer as home}  from '../routes/Home/modules/Home'
+import {HomeReducer as home} from '../routes/Home/modules/Home'
 
 export const makeRootReducer = () => {
   return combineReducers({

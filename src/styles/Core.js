@@ -6,6 +6,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderStyle: 'solid'
   }
-});
+})
 
 export default styles
