@@ -30,7 +30,6 @@ and React Native.
 * [react-native](https://github.com/facebook/react-native)
 * [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 * [babel](https://github.com/babel/babel)
-* [eslint](http://eslint.org)
 
 
 ## Reference Materials
