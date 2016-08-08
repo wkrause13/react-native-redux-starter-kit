@@ -54,9 +54,9 @@ After confirming that your development environment meets the specified [requirem
 First, clone or download:
 
 ```bash
-$ git clone https://github.com/davezuko/react-redux-starter-kit.git
+$ git clone https://github.com/wkrause13/react-native-redux-starter-kit
 // or
-$ wget -O react-redux-starter-kit.zip https://github.com/davezuko/react-redux-starter-kit/archive/master.zip
+$ wget -O react-redux-starter-kit.zip https://github.com/wkrause13/react-native-redux-starter-kit/archive/master.zip
 $ unzip react-redux-starter-kit.zip
 ```
 
@@ -74,6 +74,19 @@ $ cd <my-project-name>
 $ npm install                   # Install project dependencies
 $ npm start                     # Compile and launch
 ```
+
+The first time you run it, you may need to run:
+
+```bash
+$ npm start -- --reset-cache
+```
+
+Also, there are a number of references in the ./ios and ./android folders to the original
+project name used when running react-native init. Eventually this project will include a replacement
+script to handle this. In the mean time, use you preferred text placement tool to remove reactNativeReduxStarterKit
+references from you local copy. Be aware that at least for ios, some file names have reactNativeReduxStarterKit, so just using your text
+editor's standard replace function may not cover replacing the file names. 
+
 
 While developing, you will probably rely mostly on `react-native run-ios` or `react-native run-android`; however, there are additional scripts at your disposal:
 
