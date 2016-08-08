@@ -51,6 +51,9 @@ After confirming that your development environment meets the specified [requirem
 
 ### Install from source
 
+If you would like your project to have [react-native-drawer](https://github.com/root-two/react-native-drawer)
+switch to that branch and follow the same instructions. 
+
 First, clone or download:
 
 ```bash
