@@ -39,6 +39,7 @@
     "mockery": "^1.7.0",
     "react-addons-test-utils": "^15.3.0",
     "react-dom": "^15.3.0",
+    "react-native-drawer": "^2.2.6",
     "react-native-mock": "^0.2.5",
     "reactotron": "^0.8.0",
     "sinon": "^1.17.5",
