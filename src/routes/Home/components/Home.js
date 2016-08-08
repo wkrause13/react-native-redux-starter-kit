@@ -5,7 +5,7 @@ import HelloWorld from 'components/HelloWorld'
 import coreStyles from 'styles/Core'
 
 export const Home = () => (
-  <View style={[styles['Home'],coreStyles.box]}>
+  <View style={[styles['Home'],coreStyles.box, coreStyles.sceneContainer]}>
     <HelloWorld />
   </View>
 )
